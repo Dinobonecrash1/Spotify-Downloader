@@ -491,7 +491,7 @@ async def spotify_dl(Mbot,message: Message):
         try:
             await message.reply_text(f"Done✅",   
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Feedback", callback_data="feed")]]))
-            await message.reply_text(f"Check out @spotify_downloa(music)  @spotifynewss(News)")
+            await message.reply_text(f"Check out @Entertainment_AG(MOVIES)  @guardians_Bot_Updates(UPDATE)")
             await m.delete()
         except:
             pass 
@@ -501,7 +501,7 @@ async def spotify_dl(Mbot,message: Message):
 async def feedback(Mbot,query):
       try:
           K = await query.message.edit(f"Feedback 🏴‍☠️",
-                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Press here", url="https://t.me/dailychannelsbot?start=spotify_downloa_bot")]]))
+                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Press here", url="https://t.me/Zenitsu_AF")]]))
           H = print("New Feedback")
           if BUG:
              await copy(K,H)
@@ -514,7 +514,7 @@ async def bug(_,query):
           K = await query.message.edit(f'please report to the dev say "private version" with above  error occurred message')
           await sleep(2.3)
           H = await query.message.edit(f"Bug Report 🪲",
-                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Report to dev ", url="https://t.me/masterolic")]]))
+                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Report to dev ", url="https://t.me/Zenitsu_AF")]]))
           if BUG:
              await copy(K,H)
       except Exception as e:
