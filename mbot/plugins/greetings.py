@@ -49,7 +49,7 @@ async def start(client,message):
     if message.chat.type != "private" and message.chat.id not in AUTH_CHATS and message.from_user.id not in SUDO_USERS:
         return await message.reply_text("This Bot Will Not Work In Groups Unless It's Authorized.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
-    return await message.reply_text(f"Hello {message.from_user.first_name}, I'm a Simple Music Downloader Bot. I Currently Support Download from Youtube.",
+    return await message.reply_text(f"Hello {message.from_user.first_name}, I'm a Simple Music Downloader Bot. With some additional features like insta video download fb , Twitter and titok videos also can can download.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
 
 @Mbot.on_message(filters.command("restart") & filters.chat(OWNER_ID) & filters.private)
@@ -74,7 +74,7 @@ HELP = {
     "Deezer": "Send Deezer Playlist/Album/Track Link. I'll Download It For You.",
     "Jiosaavn": "Not Implemented yet",
     "SoundCloud": "Not Implemented yet",
-    "Group": "Will add later."
+    "Group": "please join our group to chat with random people and make new friends - https://t.me/gossip_glore"
 }
 
 
@@ -84,7 +84,7 @@ async def help(_,message):
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
     button.append([InlineKeyboardButton(text="back", callback_data=f"backdome")])
-    await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **@spotify_downloa_bot**.\nI'm Here to download your music.",
+    await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **@Spotify_song_downloadbot**.\nI'm Here to download your music.",
                         reply_markup=InlineKeyboardMarkup(button))
 
 @Mbot.on_callback_query(filters.regex(r"backdome"))
@@ -93,7 +93,7 @@ async def backdo(_,query):
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
     button.append([InlineKeyboardButton(text="back", callback_data=f"backdome")])
-    await query.message.edit(f"Hello **{query.message.from_user.first_name}**, I'm **@spotify_downloa_bot**.\nI'm Here to download your music.",
+    await query.message.edit(f"Hello **{query.message.from_user.first_name}**, I'm **@Spotify_song_downloadbot**.\nI'm Here to download your music.",
                         reply_markup=InlineKeyboardMarkup(button))     
     
 @Mbot.on_callback_query(filters.regex(r"help_(.*?)"))
@@ -108,5 +108,5 @@ async def help_home(_,query):
     button = [
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
-    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@NeedMusicRobot**.\nI'm Here to download your music.",
+    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@Spotify_song_downloadbot**.\nI'm Here to download your music.",
                         reply_markup=InlineKeyboardMarkup(button))
