@@ -32,7 +32,7 @@ from os import execvp,sys
 async def start(client,message):
     reply_markup = [[
         InlineKeyboardButton(
-            text="Dev Channel", url="https://t.me/@Aboutme_Shadow"),
+            text="Dev Channel", url="https://t.me/Aboutme_Shadow"),
         InlineKeyboardButton(
             text="OWNER",
             url="https://t.me/Zenitsu_AF"),
